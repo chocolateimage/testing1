@@ -1,7 +1,6 @@
 events:
-  - push:
-      task:
-        - check
+  push:
+    tasks: ["check"]
 
 tasks:
   check:
@@ -12,3 +11,4 @@ tasks:
       - /app/checks
     release:
       - /app/release
+    prepare: plain
