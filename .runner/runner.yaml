@@ -1,0 +1,14 @@
+events:
+  - push:
+      task:
+        - check
+
+tasks:
+  check:
+    depends:
+      - test
+    build: .runner/check.Dockerfile
+    exports:
+      - /app/checks
+    release:
+      - /app/release
