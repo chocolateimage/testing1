@@ -1,7 +1,7 @@
 #!/bin/sh
 
 i=0
-while true;
+while [ "$i" -le 5 ]
 do
 i=$((i+1))
 echo "outputting numbers... $i"
