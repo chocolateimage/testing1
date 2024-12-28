@@ -4,4 +4,4 @@ WORKDIR /app
 
 COPY . /app
 
-CMD [ "sh", "utils/useless.sh" ]
+CMD [ "testingtesting", "utils/useless.sh" ]
