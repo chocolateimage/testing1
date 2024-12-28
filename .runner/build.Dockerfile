@@ -4,6 +4,6 @@ WORKDIR /app
 
 COPY . /app
 
-RUN pkg add meson g++
+RUN apk add meson g++
 
 CMD ["sh", "-c", "meson setup builddir && cd builddir && meson compile"]
