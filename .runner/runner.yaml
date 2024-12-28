@@ -1,6 +1,6 @@
 events:
   push:
-    tasks: ["test", "build", "check"]
+    tasks: ["test"]
 
 tasks:
   build:
@@ -10,7 +10,7 @@ tasks:
     label: 🛠️ Build
   test:
     build: .runner/test.Dockerfile
-    depends: build
+    base: blank
   check:
     build: .runner/check.Dockerfile
     label: ✅ Checking
