@@ -6,5 +6,5 @@ tasks:
   build:
     build: .runner/fast.Dockerfile
     publish:
-      - /app/builddir
+      - /app/builddir/testing1
     label: 🛠️ Build
