@@ -6,7 +6,7 @@ int main() { // Entry point
     std::srand(std::time(nullptr)); // Setting the random value to current time
     std::cout << "Hello, World!" << std::endl; // The text "Hello world!" gets written to stdout with a newline
     std::vector<std::string> example; // Create a list for later
-    int max = (std::rand() / (RAND_MAX / 1000)); // Set a max variable for the for loop, set it here because in the for loop it gets executed every iteration
+    int max = (std::rand() / (RAND_MAX / 15)); // Set a max variable for the for loop, set it here because in the for loop it gets executed every iteration
     for (int i = 0; i < max; i++) { // The for loop
         example.push_back(std::to_string(std::rand())); // Add a random value as a string to the list
     }
