@@ -6,7 +6,7 @@ tasks:
   check:
     depends:
       - test
-    build: .runner/useless.Dockerfile
+    build: .runner/check.Dockerfile
     exports:
       - /app/checks
     release:
