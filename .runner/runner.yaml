@@ -11,6 +11,7 @@ tasks:
   test:
     build: .runner/test.Dockerfile
     base: blank
+    depends: build
   check:
     build: .runner/check.Dockerfile
     label: ✅ Checking
