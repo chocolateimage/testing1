@@ -4,6 +4,6 @@ WORKDIR /app
 
 COPY . /app
 
-RUN apt update && apt install -y meson g++
+RUN apt-get update && apt-get install -y meson g++
 
 CMD ["sh", "-c", "meson setup builddir && cd builddir && meson compile"]
