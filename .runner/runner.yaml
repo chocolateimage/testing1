@@ -1,6 +1,7 @@
 events:
   push:
-    tasks: ["check"]
+    tasks: ["build"]
 
 tasks:
-  check:
+  build:
+    build: .runner/build.Dockerfile
