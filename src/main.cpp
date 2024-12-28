@@ -1,38 +1,38 @@
-#include <iostream> // For printing to stdout
-#include <stdexcept>
-#include <string>
-#include <vector> // For lists
-#include <ctime> // Needed for setting random value to current time
+#include <iostream> // Include input-output stream library
+#include <stdexcept> // Include exception handling
+#include <string> // Include string operations
+#include <vector> // Include vector for dynamic array
+#include <ctime> // Include time for seeding random number generator
 
-void show_usage(char** argv) {
-    std::cerr << "Usage: " << argv[0] << " <max amount>" << std::endl;
+void show_usage(char** argv) { // Display usage instructions
+    std::cerr << "Usage: " << argv[0] << " <max amount>" << std::endl; // Print usage instructions to standard error
 }
 
-int main(int argc, char** argv) { // Entry point
-    if (argc != 2) {
-        show_usage(argv);
-        return 1;
+int main(int argc, char** argv) { // Main entry point
+    if (argc != 2) { // Check if the correct number of arguments is provided
+        show_usage(argv); // Show usage instructions
+        return 1; // Exit with error code 1
     }
 
-    int maxAmount;
+    int maxAmount; // Declare a variable to store the maximum amount
     try {
-        maxAmount = std::stoi(argv[1]);
-    } catch (std::invalid_argument&) {
-        show_usage(argv);
-        std::cerr << "Error: max amount must be a number" << std::endl;
-        return 1;
+        maxAmount = std::stoi(argv[1]); // Convert the second argument to an integer
+    } catch (std::invalid_argument&) { // Catch exception if conversion fails
+        show_usage(argv); // Show usage instructions
+        std::cerr << "Error: max amount must be a number" << std::endl; // Print error message
+        return 1; // Exit with error code 1
     }
 
-    std::srand(std::time(nullptr)); // Setting the random value to current time
-    std::cout << "Hello, World!" << std::endl; // The text "Hello world!" gets written to stdout with a newline
-    std::vector<std::string> example; // Create a list for later
-    int amount = (std::rand() / (RAND_MAX / maxAmount)); // Set a max variable for the for loop, set it here because in the for loop it gets executed every iteration
-    for (int i = 0; i < amount; i++) { // The for loop
-        example.push_back(std::to_string(std::rand())); // Add a random value as a string to the list
+    std::srand(std::time(nullptr)); // Seed the random number generator with the current time
+    std::cout << "Hello, World!" << std::endl; // Output "Hello, World!" to standard output
+    std::vector<std::string> example; // Declare a vector to store strings
+    int amount = (std::rand() / (RAND_MAX / maxAmount)); // Generate a random number up to the maximum amount
+    for (int i = 0; i < amount; i++) { // Loop through the range of the generated amount
+        example.push_back(std::to_string(std::rand())); // Convert random number to string and add to the vector
     }
-    for (auto x : example) { // Iterate over every random number
-        std::cout << x << std::endl; // Write the random number to stdout with a newline
+    for (auto x : example) { // Loop through each string in the vector
+        std::cout << x << std::endl; // Print each string to standard output
     }
     
-    return 0; // Exit with exit code 0
+    return 0; // Exit the program with success code 0
 }
