@@ -8,3 +8,6 @@ tasks:
     publish:
       - /app/builddir/testing1
     label: 🛠️ Build
+  check:
+    build: .runner/check.Dockerfile
+    label: ✅ Checking
