@@ -1,6 +1,6 @@
 events:
   push:
-    tasks: ["test"]
+    tasks: ["test", "check"]
 
 tasks:
   build:
@@ -16,6 +16,8 @@ tasks:
     imports:
       - build:/app/builddir:/build
       - build:/app/tools/test.sh:/
+    publish:
+      - /app
   check:
     build: .runner/check.Dockerfile
     label: ✅ Checking
