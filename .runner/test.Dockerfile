@@ -4,4 +4,4 @@ WORKDIR /app
 
 COPY /build /app
 
-CMD [ "testing1" ]
+CMD [ "./testing1" ]
