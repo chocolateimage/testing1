@@ -4,7 +4,7 @@ events:
 
 tasks:
   build:
-    build: .runner/fast.Dockerfile
+    build: .runner/build.Dockerfile
     publish:
       - /app/builddir/testing1
     label: 🛠️ Build
