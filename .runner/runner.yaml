@@ -16,8 +16,6 @@ tasks:
     imports:
       - build:/app/builddir:/build
       - build:/app/tools/test.sh:/
-    publish:
-      - /usr/bin
     label: 📝 Test
   check:
     build: .runner/check.Dockerfile
