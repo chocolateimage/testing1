@@ -1,3 +1,7 @@
-FROM alpine:3.21.0
+FROM debian:12.8-slim
 
-CMD [ "sh", "-c", "echo Test complete" ]
+WORKDIR /app
+
+COPY /build /app
+
+CMD [ "testing1" ]
