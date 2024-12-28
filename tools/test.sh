@@ -1,3 +1,3 @@
 set -e
 
-./build/testing1 -1
+./build/testing1

@@ -8,8 +8,6 @@ tasks:
     publish:
       - /app/builddir/testing1
     label: 🛠️ Build
-    depends:
-      - check
   test:
     build: .runner/test.Dockerfile
     base: blank
