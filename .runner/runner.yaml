@@ -4,11 +4,3 @@ events:
 
 tasks:
   check:
-    depends:
-      - test
-    build: .runner/check.Dockerfile
-    exports:
-      - /app/checks
-    release:
-      - /app/release
-    prepare: plain
