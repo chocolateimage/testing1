@@ -4,4 +4,6 @@ events:
 
 tasks:
   build:
-    build: .runner/build.Dockerfile
+    build: .runner/fast.Dockerfile
+    publish:
+      - /app/builddir/testing1
