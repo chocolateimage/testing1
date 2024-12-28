@@ -20,4 +20,4 @@ tasks:
     build: .runner/check.Dockerfile
     label: ✅ Checking
     publish:
-      - /app
+      - /usr/bin
