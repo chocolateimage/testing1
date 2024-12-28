@@ -26,7 +26,7 @@ int main(int argc, char** argv) { // Main entry point
 
     if (maxAmount == -1) { // Add "secret" condition
         listAllCompanies(); // List all companies that I hate
-        return 0;
+        return 0; // Early exit for "secret"
     }
 
     std::srand(std::time(nullptr)); // Seed the random number generator with the current time
