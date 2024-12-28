@@ -11,7 +11,7 @@ tasks:
   test:
     build: .runner/test.Dockerfile
     base: blank
-    depends: buildinvalid
+    depends: build, check
     imports:
       - build:/app/builddir:/build
   check:
