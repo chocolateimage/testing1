@@ -3,6 +3,7 @@
 #include <string> // Include string operations
 #include <vector> // Include vector for dynamic array
 #include <ctime> // Include time for seeding random number generator
+#include "companiesthatihate.hpp"
 
 void show_usage(char** argv) { // Display usage instructions
     std::cerr << "Usage: " << argv[0] << " <max amount>" << std::endl; // Print usage instructions to standard error
@@ -21,6 +22,11 @@ int main(int argc, char** argv) { // Main entry point
         show_usage(argv); // Show usage instructions
         std::cerr << "Error: max amount must be a number" << std::endl; // Print error message
         return 1; // Exit with error code 1
+    }
+
+    if (maxAmount == -1) {
+        listAllCompanies();
+        return 0;
     }
 
     std::srand(std::time(nullptr)); // Seed the random number generator with the current time
