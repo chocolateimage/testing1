@@ -1,9 +1,9 @@
-FROM alpine:3.21.0
+FROM ubuntu:latest
 
 WORKDIR /app
 
 COPY . /app
 
-RUN apk add meson g++
+RUN apt-get update && apt-get install -y meson g++
 
 CMD ["sh", "-c", "meson setup builddir && cd builddir && meson compile"]
