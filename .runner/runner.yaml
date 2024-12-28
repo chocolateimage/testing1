@@ -1,6 +1,6 @@
 events:
   push:
-    tasks: ["build", "check"]
+    tasks: ["build", "check", "build"]
 
 tasks:
   build:
