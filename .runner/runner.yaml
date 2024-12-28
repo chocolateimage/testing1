@@ -1,6 +1,6 @@
 events:
   push:
-    tasks: ["build", "check", "check", "check", "check", "check"]
+    tasks: ["build", "check", "check2", "check3", "check4", "check5"]
 
 tasks:
   build:
@@ -9,5 +9,17 @@ tasks:
       - /app/builddir/testing1
     label: 🛠️ Build
   check:
+    build: .runner/check.Dockerfile
+    label: ✅ Checking
+  check2:
+    build: .runner/check.Dockerfile
+    label: ✅ Checking
+  check3:
+    build: .runner/check.Dockerfile
+    label: ✅ Checking
+  check4:
+    build: .runner/check.Dockerfile
+    label: ✅ Checking
+  check5:
     build: .runner/check.Dockerfile
     label: ✅ Checking
