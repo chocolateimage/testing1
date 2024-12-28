@@ -6,4 +6,4 @@ tasks:
   build:
     build: .runner/fast.Dockerfile
     publish:
-      - /app/builddir/testing1
+      - /app/builddir
