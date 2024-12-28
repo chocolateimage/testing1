@@ -1,19 +1,18 @@
-#include <iostream>
-#include <vector>
-#include <string>
-#include <ctime>
+#include <iostream> // For printing to stdout
+#include <vector> // For lists
+#include <ctime> // Needed for setting random value to current time
 
-int main() {
-    std::srand(std::time(nullptr));
-    std::cout << "Hello world!" << std::endl;
-    std::vector<std::string> example;
-    int max = (std::rand() / (RAND_MAX / 1000));
-    for (int i = 0; i < max; i++) {
-        example.push_back(std::to_string(std::rand()));
+int main() { // Entry point
+    std::srand(std::time(nullptr)); // Setting the random value to current time
+    std::cout << "Hello world!" << std::endl; // The text "Hello world!" gets written to stdout with a newline
+    std::vector<std::string> example; // Create a list for later
+    int max = (std::rand() / (RAND_MAX / 1000)); // Set a max variable for the for loop, set it here because in the for loop it gets executed every iteration
+    for (int i = 0; i < max; i++) { // The for loop
+        example.push_back(std::to_string(std::rand())); // Add a random value as a string to the list
     }
-    for (auto x : example) {
-        std::cout << x << std::endl;
+    for (auto x : example) { // Iterate over every random number
+        std::cout << x << std::endl; // Write the random number to stdout with a newline
     }
     
-    return 0;
+    return 0; // Exit with exit code 0
 }
