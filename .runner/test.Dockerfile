@@ -2,6 +2,6 @@ FROM gcc:14.2.0
 
 WORKDIR /app
 
-COPY /build /app
+COPY . /app
 
-CMD [ "./testing1", "100" ]
+CMD [ "/bin/sh", "test.sh" ]
