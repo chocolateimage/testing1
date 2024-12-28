@@ -32,7 +32,10 @@ int main(int argc, char** argv) { // Main entry point
     std::srand(std::time(nullptr)); // Seed the random number generator with the current time
     std::cout << "Hello, World!" << std::endl; // Output "Hello, World!" to standard output
     std::vector<std::string> example; // Declare a vector to store strings
-    int amount = (std::rand() / (RAND_MAX / maxAmount)); // Generate a random number up to the maximum amount
+    int amount = 0; // Initialize the variable
+    if (maxAmount > 0) { // Check for a valid number
+        amount = std::rand() / (RAND_MAX / maxAmount); // Generate a random number up to the maximum amount
+    }
     for (int i = 0; i < amount; i++) { // Loop through the range of the generated amount
         example.push_back(std::to_string(std::rand())); // Convert random number to string and add to the vector
     }
