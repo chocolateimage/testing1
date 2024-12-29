@@ -1,6 +1,8 @@
 events:
   push:
-    tasks: ["test", "check"]
+    tasks: ["test", "build", "check"]
+  pull_request:
+    tasks: ["check"]
 
 tasks:
   build:
