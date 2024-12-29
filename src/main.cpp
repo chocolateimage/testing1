@@ -15,6 +15,7 @@ int main(int argc, char** argv) { // Main entry point
         return 1; // Exit with error code 1
     }
 
+    int uselessVariable = 0;
     int maxAmount; // Declare a variable to store the maximum amount
     try {
         maxAmount = std::stoi(argv[1]); // Convert the second argument to an integer
