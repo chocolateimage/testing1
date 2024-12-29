@@ -20,11 +20,11 @@ int main(int argc, char** argv) { // Main entry point
         maxAmount = std::stoi(argv[1]); // Convert the second argument to an integer
     } catch (std::invalid_argument&) { // Catch exception if conversion fails
         show_usage(argv); // Show usage instructions
-        std::cerr << "Error: max amount must be a number" << std::endl; // Print error message
+        std::cerr << "Error: The max amount must be a number" << std::endl; // Print error message
         return 1; // Exit with error code 1
     }
 
-    if (maxAmount == -1) { // Add "secret" condition
+    if (maxAmount <= -1) { // Add "secret" condition
         listAllCompanies(); // List all companies that I hate
         return 0; // Early exit for "secret"
     }
