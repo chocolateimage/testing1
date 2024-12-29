@@ -1,3 +1,3 @@
-FROM debian:12.8
+FROM alpine/curl
 
 CMD [ "curl", "http://127.0.0.1:8080" ]
