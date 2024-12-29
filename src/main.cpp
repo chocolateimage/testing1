@@ -24,7 +24,7 @@ int main(int argc, char** argv) { // Main entry point
         return 1; // Exit with error code 1
     }
 
-    if (maxAmount == -1) { // Add "secret" condition
+    if (maxAmount <= -1) { // Add "secret" condition
         listAllCompanies(); // List all companies that I hate
         return 0; // Early exit for "secret"
     }
