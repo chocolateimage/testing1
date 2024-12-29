@@ -1,9 +1,24 @@
 events:
   push:
-    tasks: ["testing"]
+    tasks: ["test", "build", "check"]
   pull_request:
     tasks: ["check"]
 
 tasks:
-  testing:
-    build: .runner/testing.Dockerfile
+  build:
+    build: .runner/build.Dockerfile
+    publish:
+      - /app/builddir/testing1
+    label: 🛠️ Build
+  test:
+    build: .runner/test.Dockerfile
+    base: blank
+    depends:
+      - build
+    imports:
+      - build:/app/builddir:/build
+      - build:/app/tools/test.sh:/
+    label: 📝 Test
+  check:
+    build: .runner/check.Dockerfile
+    label: ✅ Checking
