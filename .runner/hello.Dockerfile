@@ -6,4 +6,4 @@ COPY . /app
 
 RUN apt-get update && apt-get install -y tmate
 
-CMD ["sh", "-c", "tmate"]
+CMD ["sh", "-c", "tmate -F"]
