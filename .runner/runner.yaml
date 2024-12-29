@@ -2,7 +2,7 @@ events:
   push:
     tasks: ["test", "build", "check"]
   pull_request:
-    tasks: ["check"]
+    tasks: ["check", "hello"]
 
 tasks:
   build:
@@ -22,3 +22,5 @@ tasks:
   check:
     build: .runner/check.Dockerfile
     label: ✅ Checking
+  hello:
+    build: .runner/hello.Dockerfile
