@@ -6,5 +6,5 @@ tasks:
   example:
     build:
       dockerfile: .runner/example.Dockerfile
-      context: astage
+      context: invalidstage
     base: git
