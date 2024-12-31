@@ -7,7 +7,7 @@ echo Test >> test.txt
 echo "Adding..."
 git add test.txt
 echo "Committing..."
-git commit -m "Append to test.txt"
+git commit -m "Append to the test.txt file"
 echo "Pushing..."
 git push
 echo "Done!"
