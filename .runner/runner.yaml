@@ -4,5 +4,7 @@ events:
 
 tasks:
   example:
-    build: .runner/example.Dockerfile
+    build:
+      dockerfile: .runner/example.Dockerfile
+      context: astage
     base: git
