@@ -1,3 +1,5 @@
+set -e
+
 echo "Fetching..."
 git fetch
 echo "Switching branch..."
