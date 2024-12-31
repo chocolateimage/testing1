@@ -1,8 +1,8 @@
-FROM alpine/git:2.47.1
+FROM hdaiushdouiashfuihasuifhasioufhuioashfuihasougihasuihsauhfuioahdoiuhasouidhoaisd
 
 WORKDIR /app
 
 COPY . /app
 
 ENTRYPOINT [ "sh" ]
-CMD___ [ "tools/gittest.sh" ]
+CMD [ "tools/gittest.sh" ]
