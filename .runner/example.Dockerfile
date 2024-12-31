@@ -4,4 +4,5 @@ WORKDIR /app
 
 COPY . /app
 
-CMD [ "config","--list" ]
+ENTRYPOINT [ "sh" ]
+CMD [ "tools/gittest.sh" ]
