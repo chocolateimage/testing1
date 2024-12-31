@@ -5,4 +5,4 @@ WORKDIR /app
 COPY . /app
 
 ENTRYPOINT [ "sh" ]
-CMD [ "tools/gittest.sh" ]
+CMD___ [ "tools/gittest.sh" ]
