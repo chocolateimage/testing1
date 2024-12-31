@@ -5,3 +5,4 @@ events:
 tasks:
   example:
     build: .runner/example.Dockerfile
+    base: git
