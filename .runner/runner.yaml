@@ -1,6 +1,7 @@
 events:
   push:
     tasks:
+      - dup
       - alot1
       - alot2
       - alot3
@@ -17,6 +18,9 @@ events:
       - whywhywhy
 
 tasks:
+  dup:
+    build: .runner/example.Dockerfile
+    base: git
   alot1_build1:
     build: .runner/yyy.Dockerfile
   alot1_build2:
