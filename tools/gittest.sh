@@ -1,9 +1,11 @@
 set -e
 
+echo "Sleeping..."
+sleep 20
 echo "Fetching..."
 git fetch
 echo "Switching branch..."
-git checkout main
+git checkout test-with-base
 echo "Appending..."
 echo Test >> test.txt
 echo "Adding..."
