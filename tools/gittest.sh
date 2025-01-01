@@ -1,7 +1,5 @@
 set -e
 
-echo "Sleeping..."
-sleep 60
 echo "Fetching..."
 git fetch
 echo "Switching branch..."
@@ -10,6 +8,8 @@ echo "Appending..."
 echo Test >> test.txt
 echo "Adding..."
 git add test.txt
+echo "Sleeping..."
+sleep 60
 echo "Committing..."
 git commit -m "Append to the test.txt file"
 echo "Pushing..."
