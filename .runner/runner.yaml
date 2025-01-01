@@ -7,6 +7,8 @@ events:
       - alot1
       - alot2
       - alot3
+      - yyy
+      - whywhywhy
 
 tasks:
   build:
@@ -89,3 +91,7 @@ tasks:
       - alot3_build1
       - alot3_build2
       - alot3_build3
+  yyy:
+    build: .runner/yyy.Dockerfile
+  whywhywhy:
+    build: .runner/yyy.Dockerfile
