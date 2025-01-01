@@ -1,6 +1,10 @@
 events:
   push:
-    tasks: ["test", "build", "check"]
+    tasks:
+      - test
+      - build
+      - check
+      - alot1
 
 tasks:
   build:
@@ -20,3 +24,54 @@ tasks:
   check:
     build: .runner/check.Dockerfile
     label: ✅ Checking
+  alot1_build1:
+    build: .runner/build.Dockerfile
+    publish:
+      - /app/builddir/testing1
+  alot1_build2:
+    build: .runner/build.Dockerfile
+    publish:
+      - /app/builddir/testing1
+  alot1_build3:
+    build: .runner/build.Dockerfile
+    publish:
+      - /app/builddir/testing1
+  alot2_build1:
+    build: .runner/build.Dockerfile
+    publish:
+      - /app/builddir/testing1
+  alot2_build2:
+    build: .runner/build.Dockerfile
+    publish:
+      - /app/builddir/testing1
+  alot2_build3:
+    build: .runner/build.Dockerfile
+    publish:
+      - /app/builddir/testing1
+  alot3_build1:
+    build: .runner/build.Dockerfile
+    publish:
+      - /app/builddir/testing1
+  alot3_build2:
+    build: .runner/build.Dockerfile
+    publish:
+      - /app/builddir/testing1
+  alot3_build3:
+    build: .runner/build.Dockerfile
+    publish:
+      - /app/builddir/testing1
+  alot1:
+    depends:
+      - alot1_build1
+      - alot1_build2
+      - alot1_build3
+  alot2:
+    depends:
+      - alot2_build1
+      - alot2_build2
+      - alot2_build3
+  alot3:
+    depends:
+      - alot3_build1
+      - alot3_build2
+      - alot3_build3
