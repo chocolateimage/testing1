@@ -1,7 +1,7 @@
 set -e
 
 echo "Sleeping..."
-sleep 20
+sleep 60
 echo "Fetching..."
 git fetch
 echo "Switching branch..."
