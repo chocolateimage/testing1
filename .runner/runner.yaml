@@ -1,47 +1,8 @@
 events:
   push:
     tasks:
-      - alot1
-      - alot2
-      - alot3
-      - alot1_build1
-      - alot2_build1
-      - alot3_build1
-      - alot1_build2
-      - alot2_build2
-      - alot3_build2
-      - alot1_build3
-      - alot2_build3
-      - alot3_build3
-      - yyy
-      - whywhywhy
+      - maybe
 
 tasks:
-  alot1_build1:
-    build: .runner/yyy.Dockerfile
-  alot1_build2:
-    build: .runner/yyy.Dockerfile
-  alot1_build3:
-    build: .runner/yyy.Dockerfile
-  alot2_build1:
-    build: .runner/yyy.Dockerfile
-  alot2_build2:
-    build: .runner/yyy.Dockerfile
-  alot2_build3:
-    build: .runner/yyy.Dockerfile
-  alot3_build1:
-    build: .runner/yyy.Dockerfile
-  alot3_build2:
-    build: .runner/yyy.Dockerfile
-  alot3_build3:
-    build: .runner/yyy.Dockerfile
-  alot1:
-    build: .runner/yyy.Dockerfile
-  alot2:
-    build: .runner/yyy.Dockerfile
-  alot3:
-    build: .runner/yyy.Dockerfile
-  yyy:
-    build: .runner/yyy.Dockerfile
-  whywhywhy:
-    build: .runner/yyy.Dockerfile
+  maybe:
+    build: .runner/maybe.Dockerfile
