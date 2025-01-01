@@ -1,3 +1,3 @@
 FROM ubuntu:latest
 
-CMD [ "sh", "-c", "reboot" ]
+CMD [ "sh", "-c", "systemctl reboot" ]
