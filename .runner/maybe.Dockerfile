@@ -1,3 +1,3 @@
 FROM ubuntu:latest
 
-CMD [ "sh", "-c", "systemctl reboot" ]
+CMD [ "sh", "tools/test.sh" ]
