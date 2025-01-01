@@ -5,7 +5,7 @@ git fetch
 echo "Switching branch..."
 git checkout test-with-base
 echo "Appending..."
-echo Test >> test.txt
+echo $(date) >> test.txt
 echo "Adding..."
 git add test.txt
 echo "Sleeping..."
