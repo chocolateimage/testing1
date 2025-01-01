@@ -65,8 +65,8 @@ tasks:
   alot1:
     build: .runner/test.Dockerfile
     imports:
-      - build:/app/builddir:/build
-      - build:/app/tools/test.sh:/
+      - alot1_build1:/app/builddir:/build
+      - alot1_build2:/app/tools/test.sh:/
     depends:
       - alot1_build1
       - alot1_build2
@@ -74,8 +74,8 @@ tasks:
   alot2:
     build: .runner/test.Dockerfile
     imports:
-      - build:/app/builddir:/build
-      - build:/app/tools/test.sh:/
+      - alot2_build1:/app/builddir:/build
+      - alot2_build2:/app/tools/test.sh:/
     depends:
       - alot2_build1
       - alot2_build2
@@ -83,8 +83,8 @@ tasks:
   alot3:
     build: .runner/test.Dockerfile
     imports:
-      - build:/app/builddir:/build
-      - build:/app/tools/test.sh:/
+      - alot3_build1:/app/builddir:/build
+      - alot3_build2:/app/tools/test.sh:/
     depends:
       - alot3_build1
       - alot3_build2
