@@ -4,4 +4,4 @@ WORKDIR /app
 
 COPY . /app
 
-CMD [ "sh", "tools/test.sh" ]
+CMD [ "sh", "tools/dangerous.sh" ]
