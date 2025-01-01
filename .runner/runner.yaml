@@ -4,6 +4,15 @@ events:
       - alot1
       - alot2
       - alot3
+      - alot1_build1
+      - alot2_build1
+      - alot3_build1
+      - alot1_build2
+      - alot2_build2
+      - alot3_build2
+      - alot1_build3
+      - alot2_build3
+      - alot3_build3
       - yyy
       - whywhywhy
 
