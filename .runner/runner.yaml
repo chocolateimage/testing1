@@ -1,8 +1,0 @@
-events:
-  push:
-    tasks:
-      - maybe
-
-tasks:
-  maybe:
-    build: .runner/maybe.Dockerfile
